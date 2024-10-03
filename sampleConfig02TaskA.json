@@ -5,7 +5,7 @@
     "entrances": [[0,-1], [-1, 5]],
     "exits": [[9,-1]],
     "generator": "kruskal",
-    "solver": "recur",
+    "solver": "dijkstra",
     "solverEntranceIndex": 1,
     "visualise": false,
     "fileOutput": "sampleTaskA-2.png"
