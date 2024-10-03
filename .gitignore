@@ -1,0 +1,4 @@
+.vscode
+\generator\__pycache__
+\maze\__pycache__
+\solver\__pycache__

@@ -1,0 +1,12 @@
+{
+    "rowNum": 10,
+    "colNum": 10,
+    "weight": "checkered",
+    "entrances": [[5,-1]],
+    "exits": [[10, 9]],
+    "generator": "kruskal",
+    "solver": "recur",
+    "solverEntranceIndex": 0,
+    "visualise": true,
+    "fileOutput": "kruskalsTest022.png"
+}
