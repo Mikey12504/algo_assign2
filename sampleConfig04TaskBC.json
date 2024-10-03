@@ -6,7 +6,7 @@
     "exits": [[-1, 15], [20,10], [15,20]],
     "generator": "kruskal",
     "solver": "recur",
-    "strategy": "greedy",
+    "strategy": "brute-force",
     "visualise": false,
     "fileOutput": "test2TaskB.png"
 }
