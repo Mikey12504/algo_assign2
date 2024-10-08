@@ -2,11 +2,11 @@
     "rowNum": 5,
     "colNum": 5,
     "weight": "random",
-    "entrances": [[0,-1], [-1, 4]],
-    "exits": [[5, 2], [3,-1]],
+    "entrances": [[0,-1]],
+    "exits": [[5, 4]],
     "generator": "kruskal",
     "solver": "recur",
-    "solverEntranceIndex": 1,
+    "strategy": "greedy",
     "visualise": true,
-    "fileOutput": "sampleTaskA-1.png"
+    "fileOutput": "testTaskD1.png"
 }

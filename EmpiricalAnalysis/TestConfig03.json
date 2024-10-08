@@ -1,0 +1,12 @@
+{
+    "rowNum": 30,
+    "colNum": 30,
+    "weight": "random",
+    "entrances": [[0,-1]],
+    "exits": [[30, 29]],
+    "generator": "kruskal",
+    "solver": "recur",
+    "strategy": "greedy",
+    "visualise": true,
+    "fileOutput": "testTaskD3.png"
+}

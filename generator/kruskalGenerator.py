@@ -6,9 +6,9 @@
 # __copyright__ = 'Copyright 2024, RMIT University'
 # -------------------------------------------------------------------
 
-
 from maze.maze import Maze
 from maze.util import Coordinates
+from typing import List
 
 
 class DisjointSet:
@@ -48,34 +48,27 @@ class KruskalMazeGenerator:
         # Get all coordinates (cells) from the maze
         coords = maze.getCoords()
         num_cells = len(coords)
-        
+
         # Initialize DisjointSet with the number of cells
         disjoint_set = DisjointSet(num_cells)
 
-        # Initialize all walls with their weights (cell1, cell2, weight)
-        walls = []
-        for cell in coords:
-            neighbours = maze.neighbours(cell)
-            for neigh in neighbours:
-                # Only consider walls that are not on the boundary
-                if self.isValidCell(cell, maze) and self.isValidCell(neigh, maze) and maze.hasEdge(cell, neigh):
-                    wall_weight = maze.edgeWeight(cell, neigh)
-                    walls.append((wall_weight, cell, neigh))
+        # Get all non-boundary edges (walls) from the maze
+        edges = [edge for edge in maze.getEdges()
+                 if self.isValidCell(edge[0], maze) and self.isValidCell(edge[1], maze)]
 
-        # Sort walls by their weights (ascending order)
-        walls.sort(key=lambda x: x[0])
+        # Sort edges by their weights (ascending order)
+        edges.sort(key=lambda x: maze.edgeWeight(x[0], x[1]))
 
-        # Process each wall
-        for wall_weight, cell1, cell2 in walls:
+        # Process each edge
+        for edge in edges:
+            cell1, cell2 = edge[:2]
             cell1_index = coords.index(cell1)
             cell2_index = coords.index(cell2)
 
             # If the two cells are not part of the same set, remove the wall
             if disjoint_set.find(cell1_index) != disjoint_set.find(cell2_index):
-                # Ensure the boundary walls are not removed
-                if self.isValidCell(cell1, maze) and self.isValidCell(cell2, maze):
-                    maze.removeWall(cell1, cell2)
-                    disjoint_set.union(cell1_index, cell2_index)
+                maze.removeWall(cell1, cell2)
+                disjoint_set.union(cell1_index, cell2_index)
 
         # The maze is now generated using Kruskal's algorithm
 

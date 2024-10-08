@@ -1,0 +1,12 @@
+{
+    "rowNum": 10,
+    "colNum": 10,
+    "weight": "random",
+    "entrances": [[0,-1], [6,-1], [10,9]],
+    "exits": [[-1, 3], [10,5], [5,10]],
+    "generator": "kruskal",
+    "solver": "recur",
+    "strategy": "greedy",
+    "visualise": true,
+    "fileOutput": "testTaskD4.png"
+}
