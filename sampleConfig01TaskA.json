@@ -7,6 +7,6 @@
     "generator": "kruskal",
     "solver": "recur",
     "solverEntranceIndex": 1,
-    "visualise": true,
+    "visualise": false,
     "fileOutput": "sampleTaskA-1.png"
 }

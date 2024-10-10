@@ -7,6 +7,6 @@
     "generator": "kruskal",
     "solver": "recur",
     "strategy": "brute-force",
-    "visualise": true,
+    "visualise": false,
     "fileOutput": "testTaskB.png"
 }
