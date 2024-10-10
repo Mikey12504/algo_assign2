@@ -1,7 +1,7 @@
 {
     "rowNum": 30,
     "colNum": 30,
-    "weight": "random",
+    "weight": "checkered",
     "entrances": [[0,-1], [26,-1], [30,29]],
     "exits": [[-1, 5], [30,15], [25,30]],
     "generator": "kruskal",
